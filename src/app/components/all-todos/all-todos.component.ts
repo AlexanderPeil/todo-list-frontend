@@ -16,6 +16,7 @@ export class AllTodosComponent implements OnInit {
   ngOnInit() {
     this.initTodos();
   }
+  
 
   async initTodos() {
     try {
@@ -23,6 +24,17 @@ export class AllTodosComponent implements OnInit {
       console.log(this.todos)
     } catch (err) {
       this.error = 'Failure while loading!';
+    }
+  }
+
+
+  async deleteTodo(id: number) {
+    try {
+      await this.todoService.deleteTodo(id);
+      console.log('Todo deleted successfully!');
+      this.todos = this.todos.filter((todo: { id: number; }) => todo.id !== id);
+    } catch (err) {
+      console.error('Error deleting the todo:', err);
     }
   }
 

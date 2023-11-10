@@ -3,6 +3,7 @@
     <input type="checkbox" [checked]="todo.checked">
     {{ todo.title }}
     <a [routerLink]="['/edit-todo', todo.id]">Edit Todo</a>
+    <button (click)="deleteTodo(todo.id)">Delete Todo</button>
 </div>
 <div>
     <a routerLink="/new-todo">New Todo</a>

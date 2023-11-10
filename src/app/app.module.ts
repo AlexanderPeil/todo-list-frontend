@@ -10,6 +10,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { CreateTodoComponent } from './components/create-todo/create-todo.component';
 import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
+import { DeleteTodoComponent } from './components/delete-todo/delete-todo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
     LoginComponent,
     AllTodosComponent,
     CreateTodoComponent,
-    EditTodoComponent
+    EditTodoComponent,
+    DeleteTodoComponent
   ],
   imports: [
     BrowserModule,

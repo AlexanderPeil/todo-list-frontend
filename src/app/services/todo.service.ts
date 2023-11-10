@@ -34,4 +34,10 @@ export class TodoService {
     const url = `${environment.baseUrl}/todos/${id}/`;
     return lastValueFrom(this.http.patch(url, todo));
   }
+
+
+  deleteTodo(id: number): Promise<void> {
+    const url = `${environment.baseUrl}/todos/${id}/`;
+    return lastValueFrom(this.http.delete<void>(url));
+  }
 }
