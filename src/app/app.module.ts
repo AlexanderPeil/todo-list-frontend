@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { CreateTodoComponent } from './components/create-todo/create-todo.component';
+import { EditTodoComponent } from './components/edit-todo/edit-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AllTodosComponent,
-    CreateTodoComponent
+    CreateTodoComponent,
+    EditTodoComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@
 <div *ngFor="let todo of todos">
     <input type="checkbox" [checked]="todo.checked">
     {{ todo.title }}
+    <a [routerLink]="['/edit-todo', todo.id]">Edit Todo</a>
 </div>
 <div>
     <a routerLink="/new-todo">New Todo</a>

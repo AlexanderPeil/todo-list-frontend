@@ -1,0 +1,7 @@
+<div *ngIf="todo">
+    <form (ngSubmit)="updateTodo()">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="todo.title" name="title" id="title" required>
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
